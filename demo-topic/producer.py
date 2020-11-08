@@ -1,8 +1,10 @@
 import itertools
 from random import choice
+from typing import Optional
 
 import pika
 from pika.adapters.blocking_connection import BlockingChannel
+from pydantic import BaseModel
 
 systems = ['mail', 'authentication', 'network']
 levels = ['debug', 'info', 'warn', 'error']
